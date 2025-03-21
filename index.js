@@ -43,6 +43,9 @@ class EchoirBareAPI {
 			body: {
 				cid: data.cid,
 				content: data.content
+			},
+			headers: {
+				"authorization": data.token
 			}
 		});
 		const rsp = await req.json();
